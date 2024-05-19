@@ -32,7 +32,7 @@ add_library(Core STATIC
 configure_target(Core)
 
 # Library links
-target_link_libraries(Core 
+target_link_libraries(Core
   # Some libs
 )
 

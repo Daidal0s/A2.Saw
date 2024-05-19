@@ -20,10 +20,10 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 # Fix pthread related crash with GMock when running on Cygwin
 # This should be included *before* adding the googletest directory
-if ("${CMAKE_SYSTEM_NAME}" STREQUAL "CYGWIN")
+if("${CMAKE_SYSTEM_NAME}" STREQUAL "CYGWIN")
   add_definitions(-DTEST_HAS_PTHREAD=0)
   set(gtest_disable_pthreads ON)
-endif ()
+endif()
 
 # GTest and GMock do not play nicely with these flags, so disable them
 target_compile_options(gtest PRIVATE -Wno-ctor-dtor-privacy -Wno-conversion)
