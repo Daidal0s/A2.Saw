@@ -1,12 +1,12 @@
 ### Delete after template ###
-# Project template word - PLACEHOLDER
+# Project template word - Saw
 # Library template word - Core
 # Don't forget to rename folders~
 ### Delete after template ###
 
 cmake_minimum_required(VERSION 3.5)
 
-project(PLACEHOLDER VERSION 0.1 LANGUAGES CXX)
+project(Saw VERSION 0.1 LANGUAGES CXX)
 
 # Default Qt veriables
 set(CMAKE_AUTOUIC ON)
@@ -23,7 +23,7 @@ set(BUILD_PATH ${CMAKE_CURRENT_BINARY_DIR}/build)
 # Compiler features
 add_library(COMPILER_FEATURES INTERFACE)
 target_compile_features(COMPILER_FEATURES 
-  INTERFACE cxx_std_17
+  INTERFACE cxx_std_20
 )
 
 # Function for fast configuring
@@ -56,10 +56,10 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 # Subdirs
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Core)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/PLACEHOLDER)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Saw)
 
 
-
+target_compile_options(Core PUBLIC "-v")
 
 # CTest
 if(ENABLE_TESTING)
