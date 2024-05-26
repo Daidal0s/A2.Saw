@@ -7,10 +7,12 @@
 enum class ECandleClosePosition { Higher, Lower, Same };
 
 class Core {
-public:
-	explicit Core() = default;
+private:
 	static bool compare(ECandleClosePosition expectation, int first, int second);
 	static bool haveSaw(std::vector<int> &array);
+
+public:
+	explicit Core() = default;
 	static int saw(std::vector<int> &arrayToCheckSaw);
 	virtual ~Core() = default;
 };

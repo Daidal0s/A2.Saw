@@ -59,7 +59,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Core)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Saw)
 
 
-target_compile_options(Core PUBLIC "-v")
+
 
 # CTest
 if(ENABLE_TESTING)
